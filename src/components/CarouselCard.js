@@ -1,11 +1,11 @@
 import React from "react";
 
-const CarouselCard = props => {
-	console.log("props", props)
+const CarouselCard = ({title}) => {
+	console.log("props", title)
 
-return (
-		<div>{props.title}</div>
-	)
+	return (
+			<div>{title}</div>
+		)
 };
 
 export default CarouselCard;

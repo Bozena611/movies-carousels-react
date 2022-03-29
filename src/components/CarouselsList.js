@@ -1,11 +1,11 @@
 import React from "react";
 import CarouselCard from "./CarouselCard"
 
-const CarouselsList = props => {
-	console.log ("test2", props);
+const CarouselsList = ({carousels}) => {
+	console.log ("test2", carousels);
 	return (
 		<div className="CarouselsContainer">
-	 		{props.carousels.map((item, i) => {
+	 		{carousels.map((item, i) => {
 				console.log("item", item)
 				return (
 					<CarouselCard
