@@ -9,7 +9,7 @@ function App() {
     fetch(`https://raw.githubusercontent.com/24i/smartapps-test/main/data.json`)
       .then(res => res.json())
       .then(data => {
-        console.log("movies", data.carousels);
+       /* console.log("data", data.carousels);*/
         setCarousels(data.carousels);
       });
   }, []);

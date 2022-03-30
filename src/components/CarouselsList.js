@@ -2,15 +2,16 @@ import React from "react";
 import CarouselCard from "./CarouselCard"
 
 const CarouselsList = ({carousels}) => {
-	console.log ("test2", carousels);
+/*	console.log ("test2", carousels);*/
 	return (
-		<div className="CarouselsContainer">
-	 		{carousels.map((item, i) => {
-				console.log("item", item)
+		<div className="Carousels-container">
+	 		{carousels.map((carousel, i) => {
+			/*	console.log("item", carousel)*/
 				return (
 					<CarouselCard
 						key={i}
-						title={item.title}
+						title={carousel.title}
+						movies={carousel.items}
 					/>
 				);
 			})}
