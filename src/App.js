@@ -1,8 +1,11 @@
-import './App.css';
 import React, { useState, useEffect } from "react";
-import CarouselsList from "./components/CarouselsList";
+import { Routes, Route } from "react-router-dom"
+import './App.css';
+import Home from "./Home";
+import MovieCard from "./components/MovieCard";
 
 function App() {
+
   const [carousels, setCarousels] = useState([]);
 
   useEffect(()=> {
@@ -16,9 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <CarouselsList carousels={carousels} />
+      <Routes>
+        <Route exact path="/" element={<Home  carousels={carousels}/>} />
+        <Route path="/movies/:id" element={<MovieCard carousels={carousels} />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

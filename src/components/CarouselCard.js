@@ -1,24 +1,23 @@
 import React from "react";
 import MoviesList from "./MoviesList";
-import '../styles.css';
-
-
 
 const CarouselCard = ({title, movies}) => {
-	/*console.log("title", title)
-	console.log("list", movies)*/
+	/*console.log("title", title)*/
+	console.log("list", movies)
 
 	return (
-			<div>
+			<div className="card-container">
 				<h1>{title}</h1>
 				<ul className="movies-container">
 					{movies.map((movie, i) => {
 						/*console.log("one", movie)*/
+						const { id, title, posterUrl } = movie;
 						return (
 							<MoviesList
 								key={movie.id}
-								img={movie.posterUrl}
-								name={movie.title}
+								id={id}
+								img={posterUrl}
+								name={title}
 							 />
 							)
 					})}
