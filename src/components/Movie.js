@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 const Movie = ({ movies }) => {
 	const { id } = useParams();
@@ -8,11 +10,25 @@ const Movie = ({ movies }) => {
 		<div>
 		{movies.map((movie, i) => (
 			movie.id == id ? (
+				<div>
+				<Link to={`/`}>
+					<h2 className="align-left">Back to list</h2>
+					</Link>
 					<div className="movie-details">
 						<h1>{movie.title}</h1>
-						<img src={movie.posterUrl} className="card-img" alt={movie.title} />
+						<p className="year">
+							<span>{movie.year}</span>
+							<span>{movie.duration}min</span>
+						</p>
+						<img src={movie.posterUrl} className="details-img" alt={movie.title} />
+						<h3>
+							<span>Directed by: </span>
+							<span className="text-blue">{movie.director}</span>
+						</h3>
+						<h3><span>Actors:</span> <span className="text-blue">{movie.actors}</span></h3>
 						<h3>{movie.plot}</h3>
 					</div>
+				</div>
 					) : null
 			))}
 		</div>

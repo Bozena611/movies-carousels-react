@@ -7,7 +7,7 @@ const CarouselCard = ({title, movies}) => {
 
 	return (
 			<div className="card-container">
-				<h1>{title}</h1>
+				<h1 className="text-blue">{title}</h1>
 				<ul className="movies-container">
 					{movies.map((movie, i) => {
 						/*console.log("one", movie)*/
