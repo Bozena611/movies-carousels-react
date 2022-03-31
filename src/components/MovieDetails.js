@@ -2,17 +2,18 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
+/* Displays details for chosen movie */
 
-const Movie = ({ movies }) => {
+const MovieDetails = ({ movies }) => {
 	const { id } = useParams();
 
 	return (
 		<div>
 		{movies.map((movie, i) => (
 			movie.id == id ? (
-				<div>
-				<Link to={`/`}>
-					<h2 className="align-left">Back to list</h2>
+				<div key={movie.id}>
+					<Link to={`/`}>
+						<h2 className="align-left">Back to list</h2>
 					</Link>
 					<div className="movie-details">
 						<h1>{movie.title}</h1>
@@ -35,4 +36,4 @@ const Movie = ({ movies }) => {
 		);
 };
 
-export default Movie;
+export default MovieDetails;

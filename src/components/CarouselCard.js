@@ -1,19 +1,17 @@
 import React from "react";
-import MoviesList from "./MoviesList";
+import CarouselMovies from "./CarouselMovies";
+
+/* Displays title for each carousel and sends data for the list of movie cards*/
 
 const CarouselCard = ({title, movies}) => {
-	/*console.log("title", title)*/
-	console.log("list", movies)
-
 	return (
 			<div className="card-container">
 				<h1 className="text-blue">{title}</h1>
 				<ul className="movies-container">
 					{movies.map((movie, i) => {
-						/*console.log("one", movie)*/
 						const { id, title, posterUrl } = movie;
 						return (
-							<MoviesList
+							<CarouselMovies
 								key={movie.id}
 								id={id}
 								img={posterUrl}

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const MoviesList = ({id, img, name}) => {
+/* Displays movie cards inside carousels */
+
+const CarouselMovies = ({id, img, name}) => {
 	return (
 		<li className="movie-card">
 			<Link to={`/movies/${id}`}>
@@ -14,4 +16,4 @@ const MoviesList = ({id, img, name}) => {
 		);
 };
 
-export default MoviesList;
+export default CarouselMovies;
