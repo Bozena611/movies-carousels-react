@@ -7,7 +7,7 @@ const MoviesList = ({id, img, name}) => {
 			<Link to={`/movies/${id}`}>
 				<div className="movie-data">
 					<img src={img} className="card-img" alt={name} />
-					<h3>{name}</h3>
+					<h2>{name}</h2>
 				</div>
 			</Link>
 		</li>
