@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
-/* Displays details for chosen movie */
+/* Loops through the nested array and displays details for the chosen movie */
 
 const MovieDetails = ({ movies }) => {
 	const { id } = useParams();
@@ -10,7 +10,7 @@ const MovieDetails = ({ movies }) => {
 	return (
 		<div>
 		{movies.map((movie, i) => (
-			movie.id == id ? (
+			movie.id === parseInt(id) ? (
 				<div key={movie.id}>
 					<Link to={`/`}>
 						<h2 className="align-left">Back to list</h2>
@@ -19,7 +19,7 @@ const MovieDetails = ({ movies }) => {
 						<h1>{movie.title}</h1>
 						<p className="year">
 							<span>{movie.year}</span>
-							<span>{movie.duration}min</span>
+							<span>{movie.duration} min</span>
 						</p>
 						<img src={movie.posterUrl} className="details-img" alt={movie.title} />
 						<h3>
