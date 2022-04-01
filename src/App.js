@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom"
 import './App.css';
-import CarouselsList from "./components/CarouselsList";
-import MovieCard from "./components/MovieCard";
+import CarouselsList from "./components/HomePage/CarouselsList";
+import MovieCard from "./components/DetailsPage/MovieCard";
 
 function App() {
 
