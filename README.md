@@ -1,7 +1,7 @@
 # Mobile Responsive Web App
 <p>&nbsp;</p>
 
-## Created using React.js and [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel) for carousel display
+## Created using React.js and [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel?activeTab=readme) for carousel display
 
 
 <p>&nbsp;</p>
