@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom"
 import './App.css';
 import CarouselsList from "./components/HomePage/CarouselsList";
-import MovieCard from "./components/DetailsPage/MovieCard";
+import MovieDetails from "./components/DetailsPage/MovieDetails";
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<CarouselsList  carousels={carousels}/>} />
-          <Route path="/movies/:id" element={<MovieCard carousels={carousels} />} />
+          <Route path="/movies/:id" element={<MovieDetails />} />
         </Routes>
       </div>
     )

@@ -1,16 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from "react-router-dom";
 
-/* Loops through the nested array and displays details for the chosen movie */
+/* Fetch details from location state and display details for the chosen movie */
 
-const MovieDetails = ({ movies }) => {
+const MovieDetails = () => {
 	const { id } = useParams();
+	const location = useLocation();
+  const { movie } = location.state.movie;
 
 	return (
-		<div>
-		{movies.map((movie, i) => (
-			movie.id === parseInt(id) ? (
+		<div className="movie-container">
+		{(movie.id === parseInt(id)) ? (
 				<div key={movie.id}>
 					<Link to={`/`}>
 						<h2 className="align-left">Back to list</h2>
@@ -31,7 +31,7 @@ const MovieDetails = ({ movies }) => {
 					</div>
 				</div>
 					) : null
-			))}
+			}
 		</div>
 		);
 };
