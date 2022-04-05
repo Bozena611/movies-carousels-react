@@ -42,6 +42,7 @@ const CarouselCard = ({title, movies}) => {
 									id={id}
 									img={posterUrl}
 									name={title}
+									movie={movie}
 								 />
 							)
 					})}
