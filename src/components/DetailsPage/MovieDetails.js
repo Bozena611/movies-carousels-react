@@ -19,7 +19,7 @@ const MovieDetails = () => {
 						<h1>{movie.title}</h1>
 						<p className="year">
 							<span>{movie.year}</span>
-							<span>{movie.duration} min</span>
+							<span>{movie.runtime} min</span>
 						</p>
 						<img src={movie.posterUrl} className="details-img" alt={movie.title} />
 						<h3>
