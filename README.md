@@ -3,6 +3,10 @@
 
 ## Created using React.js and [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel?activeTab=readme) for carousel display
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+## Deployed app: https://movies-carousels-react.netlify.app/
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
