@@ -13,12 +13,13 @@ function App() {
 /* Fetch data from source and store it in state*/
 
   useEffect(()=> {
-    fetch(`https://raw.githubusercontent.com/24i/smartapps-test/main/data.json`)
+    fetch(`https://bozena611.github.io/data/movie_data.json`)
       .then(res => res.json())
       .then(
         (data) => {
+          console.log(data)
           setLoaded(true);
-          setCarousels(data.carousels);
+          setCarousels(data);
         }
       )
       .catch(

@@ -10,8 +10,8 @@ const CarouselsList = ({carousels}) => {
 				return (
 					<CarouselCard
 						key={i}
-						title={carousel.title}
-						movies={carousel.items}
+						title={carousel.name}
+						movies={carousel.movies}
 					/>
 				);
 			})}
