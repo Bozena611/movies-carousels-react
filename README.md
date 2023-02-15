@@ -6,7 +6,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-## Deployed app: https://movies-carousels-react.netlify.app/
+## Deployed app: https://bozena611-movies-carousels-react.netlify.app/
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
